@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { Provider } from "./AppContext";
+import Switcher from "./Switcher";
 import * as serviceWorker from './serviceWorker';
+
+
+const App = () => (
+  <Provider>
+    <Switcher />
+  </Provider>
+);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
